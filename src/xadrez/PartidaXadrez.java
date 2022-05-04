@@ -29,9 +29,19 @@ public class PartidaXadrez {
     }
 
     private void initialSetup(){
-        colocanNovaPeca('b', 6, new Torre(tabuleiro, Cores.WHITE));
-        colocanNovaPeca('e', 8, new Rei(tabuleiro, Cores.BLACK));
-        colocanNovaPeca('e', 1, new Rei(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('c', 1, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('c', 2, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('d', 2, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('e', 2, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('e', 1, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('d', 1, new Rei(tabuleiro, Cores.WHITE));
+
+        colocanNovaPeca('c', 7, new Torre(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('c', 8, new Torre(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('d', 7, new Torre(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('e', 7, new Torre(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('e', 8, new Torre(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('d', 8, new Rei(tabuleiro, Cores.BLACK));
 
     }
 }
