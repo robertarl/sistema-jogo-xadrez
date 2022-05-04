@@ -25,8 +25,9 @@ public class PartidaXadrez {
         return matriz;
     }
     private void initialSetup(){
-        tabuleiro.lugarPeca(new Torre(tabuleiro, Cores.WHITE), new Posicao(2, 1));
-        tabuleiro.lugarPeca(new Rei(tabuleiro, Cores.BLACK), new Posicao(0, 4));
-        tabuleiro.lugarPeca(new Rei(tabuleiro, Cores.WHITE), new Posicao(7, 4));
+        tabuleiro.colocarPeca(new Torre(tabuleiro, Cores.WHITE), new Posicao(2, 1));
+        tabuleiro.colocarPeca(new Rei(tabuleiro, Cores.BLACK), new Posicao(0, 4));
+        tabuleiro.colocarPeca (new Rei(tabuleiro, Cores.WHITE), new Posicao(7, 4));
+
     }
 }
