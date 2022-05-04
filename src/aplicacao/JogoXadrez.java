@@ -7,6 +7,5 @@ public class JogoXadrez {
 
         PartidaXadrez partidaXadrez = new PartidaXadrez();
         UI.printTabuleiro(partidaXadrez.getPecas());
-
     }
 }
