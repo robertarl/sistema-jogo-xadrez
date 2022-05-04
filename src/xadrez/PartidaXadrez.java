@@ -2,7 +2,6 @@ package xadrez;
 
 import pecasXadrez.Rei;
 import pecasXadrez.Torre;
-import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
 
 
@@ -24,10 +23,15 @@ public class PartidaXadrez {
         }
         return matriz;
     }
+
+    private void colocanNovaPeca(char coluna, int linha, PecaXadrez pecaXadrez){
+        tabuleiro.colocarPeca(pecaXadrez, new PosicaoXadrez(coluna, linha).toPosicao());
+    }
+
     private void initialSetup(){
-        tabuleiro.colocarPeca(new Torre(tabuleiro, Cores.WHITE), new Posicao(2, 1));
-        tabuleiro.colocarPeca(new Rei(tabuleiro, Cores.BLACK), new Posicao(0, 4));
-        tabuleiro.colocarPeca (new Rei(tabuleiro, Cores.WHITE), new Posicao(7, 4));
+        colocanNovaPeca('b', 6, new Torre(tabuleiro, Cores.WHITE));
+        colocanNovaPeca('e', 8, new Rei(tabuleiro, Cores.BLACK));
+        colocanNovaPeca('e', 1, new Rei(tabuleiro, Cores.WHITE));
 
     }
 }
