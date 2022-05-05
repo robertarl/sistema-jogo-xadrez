@@ -6,8 +6,6 @@ import tabuleiro.Peca;
 import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
 
-
-
 public class PartidaXadrez {
 
     private Tabuleiro tabuleiro;
@@ -45,6 +43,9 @@ public class PartidaXadrez {
     public void validatePosicaoOrigem(Posicao posicao){
         if(!tabuleiro.haUmaPeca(posicao)){
             throw new XadrezException("Nao existe peca na posicao de origem");
+        }
+        if(!tabuleiro.peca(posicao).HaPossiveisMovimentos()){
+            throw new XadrezException("Não existe movimentos escolhidos para a peca especifica");
         }
     }
 
