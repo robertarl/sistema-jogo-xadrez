@@ -9,6 +9,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JogoXadrez {
+
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
@@ -22,6 +23,9 @@ public class JogoXadrez {
                 System.out.print("Origem: ");
                 PosicaoXadrez origem = UI.lerPosicaoXadrez(sc);
 
+                boolean[][] possibleMoves = partidaXadrez.possibleMoves(origem);
+                UI.clearScreen();
+                UI.printTabuleiro(partidaXadrez.getPecas(), possibleMoves);
                 System.out.println();
                 System.out.print("Destino: ");
                 PosicaoXadrez destino = UI.lerPosicaoXadrez(sc);
