@@ -6,14 +6,17 @@ import tabuleiro.Peca;
 import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
 
-import java.awt.*;
-import java.text.ParseException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PartidaXadrez {
 
     private Tabuleiro tabuleiro;
     private Cores currentPlayer;
     private int turn;
+    private List<Peca> pecasNoTabuleiro = new ArrayList<>();
+    private List<Peca> pecasCapturadas = new ArrayList<>();
 
     public PartidaXadrez() {
         tabuleiro = new Tabuleiro(8,8);
@@ -61,6 +64,11 @@ public class PartidaXadrez {
         Peca p = tabuleiro.removerPeca(origem);
         Peca pecaCapturada = tabuleiro.removerPeca(destino);
         tabuleiro.colocarPeca(p, destino);
+
+        if (pecaCapturada != null){
+            pecasNoTabuleiro.remove(pecaCapturada);
+            pecasCapturadas.add(pecaCapturada);
+        }
         return pecaCapturada;
     }
 
@@ -87,6 +95,7 @@ public class PartidaXadrez {
 
     private void colocaNovaPeca(char coluna, int linha, PecaXadrez pecaXadrez){
         tabuleiro.colocarPeca(pecaXadrez, new PosicaoXadrez(coluna, linha).toPosicao());
+        pecasNoTabuleiro.add(pecaXadrez);
     }
 
     private void initialSetup(){
