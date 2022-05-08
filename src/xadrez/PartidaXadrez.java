@@ -1,5 +1,6 @@
 package xadrez;
 
+import pecasXadrez.Peao;
 import pecasXadrez.Rei;
 import pecasXadrez.Torre;
 import tabuleiro.Peca;
@@ -184,12 +185,33 @@ public class PartidaXadrez {
     }
 
     private void initialSetup(){
-        colocaNovaPeca('h', 7, new Torre(tabuleiro, Cores.WHITE));
-        colocaNovaPeca('d', 1, new Torre(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('a', 1, new Torre(tabuleiro, Cores.WHITE));
         colocaNovaPeca('e', 1, new Rei(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('h', 1, new Torre(tabuleiro, Cores.WHITE));
+
+        colocaNovaPeca('a', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('b', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('c', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('d', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('e', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('f', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('g', 2, new Peao(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('h', 2, new Peao(tabuleiro, Cores.WHITE));
+
         //------------------------------------------------------------------
-        colocaNovaPeca('b', 8, new Torre(tabuleiro, Cores.BLACK));
-        colocaNovaPeca('a', 8, new Rei(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('a', 8, new Torre(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('e', 8, new Rei(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('h', 8, new Torre(tabuleiro, Cores.BLACK));
+
+        colocaNovaPeca('a', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('b', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('c', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('d', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('e', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('f', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('g', 7, new Peao(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('h', 7, new Peao(tabuleiro, Cores.BLACK));
+
 
 
     }
