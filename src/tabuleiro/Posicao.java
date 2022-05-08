@@ -1,6 +1,6 @@
 package tabuleiro;
 
-public class Posicao {
+public class  Posicao {
 
     private int linha, coluna;
 
