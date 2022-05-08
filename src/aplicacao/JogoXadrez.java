@@ -19,6 +19,7 @@ public class JogoXadrez {
             try {
                 UI.clearScreen();
                 UI.printTabuleiro(partidaXadrez.getPecas());
+                UI.imprimirPartida(partidaXadrez);
                 System.out.println();
                 System.out.print("Origem: ");
                 PosicaoXadrez origem = UI.lerPosicaoXadrez(sc);
