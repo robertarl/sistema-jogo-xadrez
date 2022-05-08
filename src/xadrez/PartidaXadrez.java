@@ -81,19 +81,11 @@ public class PartidaXadrez {
         }
         return (PecaXadrez) pecaCapturada;
     }
-    private void desfazMovimento(Posicao origem, Posicao destino, Peca pecaCapturada) {
-        Peca p = tabuleiro.removerPeca(destino);
-        tabuleiro.colocarPeca(p, origem);
-
-        if (pecaCapturada != null) {
-            tabuleiro.colocarPeca(pecaCapturada, destino);
-            pecasNoTabuleiro.remove(pecaCapturada);
-            pecasNoTabuleiro.add(pecaCapturada);
-        }
-    }
 
     public Peca mover(Posicao origem, Posicao destino){
-        Peca p = tabuleiro.removerPeca(origem);
+
+        PecaXadrez p = (PecaXadrez) tabuleiro.removerPeca(origem);
+        p.aumentarMovimentos();
         Peca pecaCapturada = tabuleiro.removerPeca(destino);
         tabuleiro.colocarPeca(p, destino);
 
@@ -102,6 +94,18 @@ public class PartidaXadrez {
             pecasCapturadas.add(pecaCapturada);
         }
         return pecaCapturada;
+    }
+    private void desfazMovimento(Posicao origem, Posicao destino, Peca pecaCapturada) {
+
+        PecaXadrez p = (PecaXadrez) tabuleiro.removerPeca(destino);
+        p.diminuirMovimentos();
+        tabuleiro.colocarPeca(p, origem);
+
+        if (pecaCapturada != null) {
+            tabuleiro.colocarPeca(pecaCapturada, destino);
+            pecasNoTabuleiro.remove(pecaCapturada);
+            pecasNoTabuleiro.add(pecaCapturada);
+        }
     }
 
     public void validatePosicaoOrigem(Posicao posicao){
