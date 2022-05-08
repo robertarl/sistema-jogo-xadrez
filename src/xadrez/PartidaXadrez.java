@@ -186,6 +186,7 @@ public class PartidaXadrez {
         colocaNovaPeca('a', 1, new Torre(tabuleiro, Cores.WHITE));
         colocaNovaPeca('b', 1, new Cavalo(tabuleiro, Cores.WHITE));
         colocaNovaPeca('c', 1, new Bispo(tabuleiro, Cores.WHITE));
+        colocaNovaPeca('d', 1, new Rainha(tabuleiro, Cores.WHITE));
         colocaNovaPeca('e', 1, new Rei(tabuleiro, Cores.WHITE));
         colocaNovaPeca('f', 1, new Bispo(tabuleiro, Cores.WHITE));
         colocaNovaPeca('g', 1, new Cavalo(tabuleiro, Cores.WHITE));
@@ -204,6 +205,7 @@ public class PartidaXadrez {
         colocaNovaPeca('a', 8, new Torre(tabuleiro, Cores.BLACK));
         colocaNovaPeca('b', 8, new Cavalo(tabuleiro, Cores.BLACK));
         colocaNovaPeca('c', 8, new Bispo(tabuleiro, Cores.BLACK));
+        colocaNovaPeca('d', 8, new Rainha(tabuleiro, Cores.BLACK));
         colocaNovaPeca('e', 8, new Rei(tabuleiro, Cores.BLACK));
         colocaNovaPeca('f', 8, new Bispo(tabuleiro, Cores.BLACK));
         colocaNovaPeca('g', 8, new Cavalo(tabuleiro, Cores.BLACK));
